@@ -1,3 +1,104 @@
+/* Global Styles */
+body {
+  background: #000;               /* dark background for a grill/night ambiance */
+  color: #eee;                    /* light text for contrast on dark bg */
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* Visually-hidden text (for screen readers) */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+header .logo {
+  max-width: 200px;
+  height: auto;
+}
+header p {
+  font-size: 1.1em;
+  color: #ccc;
+  margin: 10px 0 0;
+}
+
+/* Gallery section */
+#gallery-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#gallery-section h2 {
+  color: #FFD700;               /* gold section title to match brand color */
+  text-align: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Upload area styles */
+#upload-area {
+  border: 2px dashed #888;
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#upload-area p {
+  margin: 0;
+}
+#upload-area.dragover {
+  border-color: #FFD700;        /* highlight border when dragging file over */
+  color: #FFD700;
+}
+
+/* Gallery images grid */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#gallery img {
+  width: calc(33% - 10px);
+  max-width: calc(33% - 10px);
+  height: auto;
+  border: 1px solid #555;
+}
+#noImagesMsg {
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive adjustments for gallery columns */
+@media (max-width: 600px) {
+  #gallery img {
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 400px) {
+  #gallery img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Footer style */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9em;
+  color: #666;
+}
 /* Reset and Base Styles */
 * {
     margin: 0;
