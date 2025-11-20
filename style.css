@@ -1,1 +1,122 @@
 
+/* ===============================
+   Global Styles
+=================================*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* 어두운 숯불 분위기 */
+  color: #eee;      /* 밝은 글씨 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ===============================
+    Hero(첫 화면)
+=================================*/
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1604908176997-4a9f1bfe63c9?q=80&w=2070') center/cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #ff4747;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.hero button:hover {
+  background: #ff2a2a;
+}
+
+/* ===============================
+    메뉴 영역
+=================================*/
+#menu {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+#menu h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.menu-item span {
+  font-size: 1.2rem;
+}
+
+.menu-item button {
+  background: #ff7b00;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.menu-item button:hover {
+  background: #ff9100;
+}
+
+/* ===============================
+    장바구니
+=================================*/
+.cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 240px;
+}
+
+.cart.hidden { display: none; }
+
+.cart h3 {
+  margin-top: 0;
+}
+
+#cart-items {
+  padding-left: 20px;
+}
+
+.cart button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #00c23a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.cart button:hover {
+  background: #00e04b;
+}
