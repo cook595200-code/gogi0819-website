@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>고기처럼0819 - 특수부위 전문점</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/script.js"></script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>고기처럼0819</h1>
+  <p>특수부위 전문점 · 맛의 경계를 극찬으로 UP!</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">소개</a></li>
+    <li><a href="#menu">메뉴 주문</a></li>
+    <li><a href="#event">이벤트</a></li>
+    <li><a href="#community">커뮤니티</a></li>
+    <li><a href="#map">오시는 길</a></li>
+  </ul>
+</nav>
+
+
+<section id="hero">
+  <h2>특수부위 전문 고깃집</h2>
+  <button onclick="scrollToMenu()">메뉴 주문하기</button>
+</section>
+
+
+
+<section id="menu">
+  <h2>메뉴</h2>
+
+  <div class="menu-item">
+    <span>꼬들살 (160g)</span>
+    <span>14,000원</span>
+    <button onclick="addToCart('꼬들살',14000)">담기</button>
+  </div>
+
+  <div class="menu-item">
+    <span>삼겹살 (160g)</span>
+    <span>15,000원</span>
+    <button onclick="addToCart('삼겹살',15000)">담기</button>
+  </div>
+
+  <div class="menu-item">
+    <span>항정살 (160g)</span>
+    <span>16,000원</span>
+    <button onclick="addToCart('항정살',16000)">담기</button>
+  </div>
+
+  <div class="menu-item">
+    <span>양념 갈비 (320g)</span>
+    <span>16,000원</span>
+    <button onclick="addToCart('양념갈비',16000)">담기</button>
+  </div>
+
+  <div class="menu-item">
+    <span>오늘의 소고기 (200g)</span>
+    <span>25,000원</span>
+    <button onclick="addToCart('오늘의 소고기',25000)">담기</button>
+  </div>
+</section>
+
+
+
+
+<div id="cart" class="cart hidden">
+  <h3>장바구니</h3>
+  <ul id="cart-items"></ul>
+  <p id="cart-total"></p>
+  <button onclick="sendToNaver()">네이버 톡톡으로 주문 보내기</button>
+</div>
+
+
+</body>
+</html>
 
