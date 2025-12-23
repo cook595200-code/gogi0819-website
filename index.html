@@ -6,64 +6,109 @@
     <title>고기처럼0819</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; color: #333; text-align: center; }
+        /* 전체 디자인 설정 */
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+            text-align: center; /* 모든 글자 가운데 정렬! */
+        }
         a { text-decoration: none; color: inherit; }
-        ul { list-style: none; padding: 0; }
+        
+        /* 가운데 정렬을 위한 마법 상자 */
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
 
-        /* 전체를 감싸는 중앙 정렬 컨테이너 */
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* 1. 상단 메뉴바 디자인 */
+        nav ul { 
+            display: flex; 
+            justify-content: center; /* 메뉴를 가운데로! */
+            gap: 30px; 
+            padding: 20px 0; 
+            border-bottom: 2px solid #eee; 
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        nav ul li a { 
+            font-weight: bold; 
+            color: #555; 
+            font-size: 1.1em;
+        }
+        nav ul li a:hover { color: #d35400; } /* 마우스 올리면 주황색 */
 
-        /* 상단 내비게이션 메뉴 */
-        nav ul { display: flex; justify-content: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid #eee; }
-        nav ul li a { font-weight: bold; color: #555; }
-        nav ul li a:hover { color: #d35400; }
+        /* 2. 메인 설명 디자인 */
+        .hero-section {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        h1.main-title { 
+            color: #d35400; 
+            font-size: 2.5em; 
+            margin-bottom: 10px; 
+        }
+        .welcome-text { color: #666; font-size: 1.2em; }
 
-        /* 메인 타이틀 디자인 */
-        h1.main-title { color: #d35400; margin-top: 40px; }
-
-        /* 사이드바에서 가져온 내용들 스타일 */
-        .sidebar-content { background: #f9f9f9; padding: 30px; border-radius: 15px; margin: 40px 0; }
-        .sidebar-menu li { margin-bottom: 10px; }
-        .sidebar-menu li a { color: #d35400; font-weight: bold; }
-
-        /* 장바구니 영역 스타일 */
-        .cart-section { border-top: 2px solid #eee; padding-top: 30px; }
+        /* 3. 장바구니 디자인 */
+        .cart-section { 
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+        }
+        
+        /* 버튼 스타일 */
+        .btn-order {
+            background-color: #d35400;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-
+        
         <nav>
             <ul>
                 <li><a href="about.html">소개</a></li>
                 <li><a href="menu.html">메뉴 주문</a></li>
                 <li><a href="#">이벤트</a></li>
                 <li><a href="#">커뮤니티</a></li>
-                <li><a href="about.html#location">오시는 길</a></li>
+                <li><a href="about.html">오시는 길</a></li>
             </ul>
         </nav>
 
-        <div style="margin-top: 30px;">
-             <img src="meat.jpg" alt="맛있는 고기" width="100%" style="max-width: 600px; border-radius: 15px;">
-        </div>
-
-        <div class="sidebar-content">
-            <h1 class="main-title">특수부위 전문 고깃집</h1>
-            <p>고기처럼0819에 오신 것을 환영합니다.</p>
+        <div class="hero-section">
+            <img src="meat.jpg" alt="맛있는 고기" style="width: 100%; max-width: 500px; border-radius: 15px; margin-bottom: 20px;">
             
-            <ul class="sidebar-menu" style="margin-top: 30px;">
-                <li><a href="menu.html" style="font-size: 1.2em;">🥩 메뉴 주문 바로가기</a></li>
-            </ul>
+            <h1 class="main-title">특수부위 전문 고깃집</h1>
+            <p class="welcome-text">고기처럼0819에 오신 것을 환영합니다.<br>맛의 경계를 극찬으로 UP!</p>
+            
+            <a href="menu.html" class="btn-order">🥩 메뉴 주문하러 가기</a>
         </div>
 
         <div class="cart-section">
             <h2>🛒 장바구니</h2>
-            <div style="border: 1px solid #ddd; padding: 20px; border-radius: 10px; background: white; display: inline-block; min-width: 300px;">
-                <p>장바구니가 비어있습니다.</p>
-                </div>
+            <div style="border: 1px dashed #ccc; padding: 20px; background: white; border-radius: 10px; max-width: 400px; margin: 0 auto;">
+                <p style="color: #999;">아직 담은 메뉴가 없습니다.</p>
+            </div>
+            <br>
+            <button onclick="alert('준비 중입니다!')" style="padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 5px; cursor: pointer;">
+                네이버 톡톡으로 주문 보내기
+            </button>
         </div>
 
-    </div> </body>
-</html>
+    </div>
 
+</body>
+</html>
