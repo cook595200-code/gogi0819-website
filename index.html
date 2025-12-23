@@ -3,112 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고기처럼0819</title>
+    <title>메뉴 주문 - 고기처럼0819</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 전체 디자인 설정 */
-        body { 
-            font-family: 'Noto Sans KR', sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            color: #333; 
-            text-align: center; /* 모든 글자 가운데 정렬! */
-        }
-        a { text-decoration: none; color: inherit; }
+        body { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; color: #333; background-color: #fff; }
         
-        /* 가운데 정렬을 위한 마법 상자 */
-        .container { 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-        }
+        /* 헤더 디자인 */
+        header { background-color: #f9f9f9; padding: 30px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        h1 { margin: 0; color: #d35400; font-size: 1.8em; }
+        p.subtitle { margin-top: 10px; color: #666; font-size: 0.9em; }
 
-        /* 1. 상단 메뉴바 디자인 */
-        nav ul { 
+        /* 메뉴 리스트 디자인 */
+        .menu-container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .menu-item { 
             display: flex; 
-            justify-content: center; /* 메뉴를 가운데로! */
-            gap: 30px; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #eee; 
             padding: 20px 0; 
-            border-bottom: 2px solid #eee; 
-            list-style: none;
-            flex-wrap: wrap;
         }
-        nav ul li a { 
-            font-weight: bold; 
-            color: #555; 
-            font-size: 1.1em;
-        }
-        nav ul li a:hover { color: #d35400; } /* 마우스 올리면 주황색 */
-
-        /* 2. 메인 설명 디자인 */
-        .hero-section {
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        h1.main-title { 
-            color: #d35400; 
-            font-size: 2.5em; 
-            margin-bottom: 10px; 
-        }
-        .welcome-text { color: #666; font-size: 1.2em; }
-
-        /* 3. 장바구니 디자인 */
-        .cart-section { 
-            margin-top: 50px;
-            padding: 30px;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-        }
+        .menu-info { display: flex; flex-direction: column; flex: 1; padding-right: 10px; }
+        .menu-name { font-size: 1.1em; font-weight: bold; margin-bottom: 5px; }
+        .menu-desc { font-size: 0.8em; color: #888; word-break: keep-all; }
+        .menu-price { font-weight: bold; color: #d35400; font-size: 1.1em; min-width: 70px; text-align: right; }
         
-        /* 버튼 스타일 */
-        .btn-order {
-            background-color: #d35400;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.2em;
+        /* 주문 버튼 디자인 (핵심!) */
+        .btn-call {
             display: inline-block;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.8em;
+            margin-left: 10px;
         }
+        .btn-call:hover { background-color: #d35400; }
+
+        /* 하단 홈 버튼 */
+        .footer-btn { text-align: center; margin: 40px 0; }
+        .btn-home { background-color: #eee; color: #333; padding: 10px 20px; text-decoration: none; border-radius: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header>
+        <h1>🥢 메뉴 주문</h1>
+        <p class="subtitle">터치하면 바로 전화로 연결됩니다!</p>
+    </header>
+
+    <section class="menu-container">
         
-        <nav>
-            <ul>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="menu.html">메뉴 주문</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="about.html">오시는 길</a></li>
-            </ul>
-        </nav>
-
-        <div class="hero-section">
-            <img src="meat.jpg" alt="맛있는 고기" style="width: 100%; max-width: 500px; border-radius: 15px; margin-bottom: 20px;">
-            
-            <h1 class="main-title">특수부위 전문 고깃집</h1>
-            <p class="welcome-text">고기처럼0819에 오신 것을 환영합니다.<br>맛의 경계를 극찬으로 UP!</p>
-            
-            <a href="menu.html" class="btn-order">🥩 메뉴 주문하러 가기</a>
-        </div>
-
-        <div class="cart-section">
-            <h2>🛒 장바구니</h2>
-            <div style="border: 1px dashed #ccc; padding: 20px; background: white; border-radius: 10px; max-width: 400px; margin: 0 auto;">
-                <p style="color: #999;">아직 담은 메뉴가 없습니다.</p>
+        <div class="menu-item">
+            <div class="menu-info">
+                <span class="menu-name">꼬들살 (160g)</span>
+                <span class="menu-desc">식감이 일품! 씹을수록 고소한 뒷목살</span>
             </div>
-            <br>
-            <button onclick="alert('준비 중입니다!')" style="padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 5px; cursor: pointer;">
-                네이버 톡톡으로 주문 보내기
-            </button>
+            <div style="text-align: right;">
+                <div class="menu-price">14,000원</div>
+                <a href="tel:02-123-4567" class="btn-call">📞 주문</a>
+            </div>
         </div>
 
-    </div>
+        <div class="menu-item">
+            <div class="menu-info">
+                <span class="menu-name">삼겹살 (160g)</span>
+                <span class="menu-desc">육즙 팡팡! 실패 없는 국민 고기</span>
+            </div>
+            <div style="text-align: right;">
+                <div class="menu-price">15,000원</div>
+                <a href="tel:02-123-4567" class="btn-call">📞 주문</a>
+            </div>
+        </div>
 
+        <div class="menu-item">
+            <div class="menu-info">
+                <span class="menu-name">항정살 (160g)</span>
+                <span class="menu-desc">아삭하고 쫄깃한 식감의 정점</span>
+            </div>
+            <div style="text-align: right;">
+                <div class="menu-price">16,000원</div>
+                <a href="tel:02-123-4567" class="btn-call">📞 주문</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-info">
+                <span class="menu-name">양념갈비 (320g)</span>
+                <span class="menu-desc">단짠단짠 끝판왕! 밥도둑 멍석갈비</span>
+            </div>
+            <div style="text-align: right;">
+                <div class="menu-price">16,000원</div>
+                <a href="tel:02-123-4567" class="btn-call">📞 주문</a>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-info">
+                <span class="menu-name">오늘의 소고기 (200g)</span>
+                <span class="menu-desc">사장님이 엄선한 최상급 소고기</span>
+            </div>
+            <div style="text-align: right;">
+                <div class="menu-price">25,000원</div>
+                <a href="tel:02-123-4567" class="btn-call">📞 주문</a>
+            </div>
+        </div>
+
+        <div class="footer-btn">
+            <a href="index.html" class="btn-home">🏠 홈으로 가기</a>
+        </div>
+
+    </section>
 </body>
 </html>
